@@ -1,0 +1,21 @@
+<nav>
+  <div class="nav-wrapper"><a class="brand-logo" href="/">SHOP</a>
+    <ul class="right hide-on-med-and-down" id="nav-mobile">
+      {{#if isHome}}
+      <li class="active"><a href="/">Home</a></li>
+      {{else}}
+      <li><a href="/">Home</a></li>
+      {{/if}}
+      {{#if isBooks}}
+      <li class="active"><a href="/api/books">Buy</a></li>
+      {{else}}
+      <li><a href="/api/books">Buy</a></li>
+      {{/if}}
+      {{#if isAbout}}
+      <li class="active"><a href="/about">About shop</a></li>
+      {{else}}
+      <li><a href="/about">About shop</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>

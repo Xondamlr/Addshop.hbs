@@ -1,0 +1,33 @@
+<h1>Cateolouge</h1>
+
+<div class="books">
+    {{#if books}}
+    <div class="row">
+        {{#each books}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{img}}" alt="{{img}}">
+                    <span class=" card-title">{{name}}</span>
+                </div>
+                <div class="card-lorem">
+                    <p>{{lorem}}</p>
+                </div>
+                <div class="card-content">
+                    <p>{{year}}$</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Buy</a>
+                    <a href="/api/books/update" id="{{id}}">Update card</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <h2>Product are empty</h2>
+    {{/if}}
+</div>
+
+
+<a href="/api/books/add">Add product</a>
